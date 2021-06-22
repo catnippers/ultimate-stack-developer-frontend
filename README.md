@@ -21,7 +21,7 @@ Frontend part is based on:
 - `GraphQL` client for API queries is a homemade `POST` request generator with `Angular's` basic `HttpClient`
 
 - `Cypress` as the `End-to-end (E2E)` test framework
-    - Why not `Protractor`? Because it's going to be removed from `Angular` and I know how to work with `Cypress`)
+    - Why not `Protractor`? Because it's going to be removed from `Angular` and I know how to work with `Cypress`
 
 ## Key Files Description
 `Dockerfile` - this file enables Docker Hub to properly dockerize* the app
