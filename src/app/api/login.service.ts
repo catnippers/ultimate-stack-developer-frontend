@@ -1,0 +1,41 @@
+import {Injectable} from '@angular/core';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {CookieService} from 'ngx-cookie-service';
+
+@Injectable({
+    providedIn: 'root'
+})
+export class LoginService {
+    // for prod server use: private httpPrefix = 'https://';
+    // for dev server use: private httpPrefix = 'http://';
+    private httpPrefix = 'https://';
+
+    // for production server use: private backendUrl = 'ultimatestackdeveloper.herokuapp.com';
+    // for local server use: private backendUrl = 'localhost:8082';
+    // for remote server use: private backendUrl = '192.168.0.199:8082';
+    private backendUrl = 'ultimatestackdeveloper.herokuapp.com';
+
+    constructor(private httpClient: HttpClient,
+                private cookieService: CookieService) {
+    }
+
+    public generateToken(username: string, password: string) {
+        if (this.cookieService.get('token') !== null) {
+            this.cookieService.delete('token');
+        }
+
+        const headerDictionary = {
+            'Content-Type': 'application/json',
+        };
+
+        const requestOptions = {
+            headers: new HttpHeaders(headerDictionary),
+        };
+
+        return this.httpClient
+            .post(
+                `${this.httpPrefix}${this.backendUrl}/login`,
+                `{"username":"${username}","password":"${password}"}`,
+                requestOptions);
+    }
+}
