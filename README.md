@@ -9,6 +9,8 @@ LinkedIn: https://www.linkedin.com/in/tomasz-buga-79933886/
 mail: `kontakt@tomaszbuga.pl`
 
 ## Project Overview
+Live Demo: https://ultimatestackdeveloper.netlify.com
+
 **Ultimate Stack Developer** is an application for managing micro-scale blog about `whatever you can imagine!`
 
 ### Tech Stack
