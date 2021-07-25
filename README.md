@@ -65,20 +65,20 @@ Feel free to modify the `graphql.service.ts` & `login.service.ts` as required
 
 ## Getting started
 ### Run the project
-### on macOS:
-1. Prerequisites
-    - Angular CLI (https://angular.io/docs)
-    - NodeJS (https://nodejs.org/en/)
-    - UltimateStackDeveloper Backend (https://github.com/catnippers/ultimate-stack-developer-backend)
-    
+Prerequisites
+  - Angular CLI (https://angular.io/docs)
+  - NodeJS (https://nodejs.org/en/)
+  - UltimateStackDeveloper Backend (https://github.com/catnippers/ultimate-stack-developer-backend)
 
-2. Cloning repository and installation
+### Setup on macOS:
+
+1. Cloning repository and installation
     - Launch `Terminal.app` and navigate (using `cd` command) to directory, where you'd like to store your copy of the source code
     - Use the `git clone https://github.com/catnippers/ultimate-stack-developer-frontend.git` command to clone the repository to your local directory
     - Navigate (using `cd` command) to the root directory of the project (basically - it's where the `package.json` file is located)
     - Run the `npm install` in order to download all the required dependencies to your project's directory (this process should create `node_modules` folder)
 
-3. Running application on a local server
+2. Running application on a local server
     - Make sure that you've set proper backend connection setting inside of `graphql.service.ts` & `login.service.ts` files (backend part of the `UltimateStackDeveloper` is available at https://github.com/catnippers/ultimate-stack-developer-backend)
     - Launch `Terminal.app` and navigate (using `cd` command) to the project's directory
     - Use the `npm start` command to launch the `start` script from the `package.json` file (this is basically using the `Angular CLI`'s `ng serve` command which can be useful, if you'd like to add additional `Angular CLI`'s run parameters)
@@ -89,8 +89,8 @@ Running application on a docker container (TBA)
 
 Deployment of the app to a Netlify server (TBA)
 
-### on Windows: (TBA)
-### on Linux: (TBA)
+### Setup on Windows: (TBA)
+### Setup on Linux: (TBA)
 ## Versions
 `Node.js` - `12.16.3` (version used in the Dockerfile: `12.7`)
 
