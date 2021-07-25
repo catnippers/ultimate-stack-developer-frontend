@@ -82,6 +82,7 @@ Feel free to modify the `graphql.service.ts` & `login.service.ts` as required
     - Make sure that you've set proper backend connection setting inside of `graphql.service.ts` & `login.service.ts` files (backend part of the `UltimateStackDeveloper` is available at https://github.com/catnippers/ultimate-stack-developer-backend)
     - Launch `Terminal.app` and navigate (using `cd` command) to the project's directory
     - Use the `npm start` command to launch the `start` script from the `package.json` file (this is basically using the `Angular CLI`'s `ng serve` command which can be useful, if you'd like to add additional `Angular CLI`'s run parameters)
+    - App should be available at `http://localhost:4200`
 
 ### Deploy the project
 Running application on a docker container (TBA)
