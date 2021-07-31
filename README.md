@@ -1,4 +1,7 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/0526f760-0147-499b-b277-9d3c6b2fd32d/deploy-status)](https://app.netlify.com/sites/ultimatestackdeveloper/deploys)
+
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/54834520d4ca4d8c8eb31083b10bcc23)](https://www.codacy.com/gh/catnippers/ultimate-stack-developer-frontend/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=catnippers/ultimate-stack-developer-frontend&amp;utm_campaign=Badge_Grade)
+
 # Ultimate Stack Developer (Frontend)
 ### Created by Tomasz Buga
 
