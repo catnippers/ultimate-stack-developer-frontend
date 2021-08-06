@@ -23,7 +23,8 @@ export class ArticleRowComponent implements OnInit {
     navigateToArticleDisplay(id: number) {
         if (this.router.url === '/the/architect/article/list') {
             this.router.navigate(['/the/architect/article'], {queryParams: {articleId: id}});
+        } else {
+            this.router.navigate(['/article'], {queryParams: {articleId: id}});
         }
-        this.router.navigate(['/article'], {queryParams: {articleId: id}});
     }
 }
