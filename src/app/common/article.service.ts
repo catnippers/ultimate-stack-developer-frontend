@@ -4,7 +4,6 @@ import {ResponseModel} from './models/response.model';
 import {ActivatedRoute, Router} from '@angular/router';
 import {GraphQLService} from '../api/graphql.service';
 import {Subject} from 'rxjs';
-import {Category} from './models/category.model';
 
 @Injectable({
     providedIn: 'root'
@@ -83,10 +82,7 @@ export class ArticleService {
                     newArticleContent,
                     params.articleId)
                 .subscribe(() => {
-                    console.log('successfully saved!');
-                    // this.router.navigate(['the/architect/article/list']);
-                }, () => {
-                    console.log('could not save new version of the article');
+                    this.router.navigate(['the/architect/article/list']);
                 });
         }).unsubscribe();
     }

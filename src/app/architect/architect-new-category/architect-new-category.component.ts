@@ -35,14 +35,6 @@ export class ArchitectNewCategoryComponent implements OnInit {
         const newCategoryTitle = this.newCategoryForm.controls.newCategoryTitle.value;
         const newCategoryTag = this.newCategoryForm.controls.newCategoryTag.value;
 
-        if (newCategoryTitle === null) {
-            console.log('TITLE IS NULL! ABORT! ABORT I SAY!');
-        }
-
-        if (newCategoryTag === null) {
-            console.log('TAG IS NULL! ABORT! ABORT I SAY!');
-        }
-
         if (newCategoryTitle !== null && newCategoryTag !== null) {
             this.graphQLService
                 .createNewCategory(newCategoryTitle, newCategoryTag)

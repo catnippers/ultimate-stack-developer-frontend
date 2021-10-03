@@ -5,7 +5,6 @@ import {Category} from '../../common/models/category.model';
 import {Subscription} from 'rxjs';
 import {ArticleService} from '../../common/article.service';
 import {CategoryService} from '../../common/category.service';
-import {Router} from "@angular/router";
 
 @Component({
     selector: 'app-architect-edit-article',
@@ -33,8 +32,7 @@ export class ArchitectEditArticleComponent implements OnInit, OnDestroy {
     isArticleFormSetUp = false;
 
     constructor(private articleService: ArticleService,
-                private categoryService: CategoryService,
-                private router: Router) {
+                private categoryService: CategoryService) {
     }
 
     ngOnInit(): void {
@@ -92,7 +90,6 @@ export class ArchitectEditArticleComponent implements OnInit, OnDestroy {
         const newArticleContent = this.newArticleForm.controls.newArticleContent.value.replace(/\n/g, '<br>');
 
         await this.articleService.editArticleById(newArticleTitle, newArticleSummary, newArticleContent);
-        await this.router.navigate(['the/architect/article/list']);
     }
 
     runArticlePreview() {
