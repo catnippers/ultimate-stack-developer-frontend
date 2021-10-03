@@ -10,7 +10,7 @@ $backgroundColor: #313131;
 $headerBackgroundColor: #fbff3d;
 $headerTextColor: #404040;
 $mainBackgroundColor: #404040;
-$mainTextColor: #ffffff;
+$mainTextColor: #fff;
 $buttonHoverColor: #cfd300;
 $subtitleBackgroundColor: #6d6d6d;
 $articleTextColor: #bcbcbc;
@@ -388,7 +388,6 @@ app-article-display {
     transform: scale(1);
   }
 }
-
 
 /* Custom scrollbar width */
 ::-webkit-scrollbar {
