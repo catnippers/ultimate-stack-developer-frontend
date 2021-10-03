@@ -2,8 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-category-badge',
-  templateUrl: './category-badge.component.html',
-  styleUrls: ['./category-badge.component.scss']
+  templateUrl: './category-badge.component.html'
 })
 export class CategoryBadgeComponent implements OnInit {
   @Input() badgeTag: string;

@@ -5,8 +5,7 @@ import {ArticleService} from '../../common/article.service';
 
 @Component({
     selector: 'app-architect-list-of-articles',
-    templateUrl: './architect-list-of-articles.component.html',
-    styleUrls: ['./architect-list-of-articles.component.scss']
+    templateUrl: './architect-list-of-articles.component.html'
 })
 export class ArchitectListOfArticlesComponent implements OnInit, OnDestroy {
     articleList: Array<Article>;

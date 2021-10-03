@@ -5,8 +5,7 @@ import {Router} from '@angular/router';
 
 @Component({
     selector: 'app-article-display',
-    templateUrl: './article-display.component.html',
-    styleUrls: ['./article-display.component.scss']
+    templateUrl: './article-display.component.html'
 })
 export class ArticleDisplayComponent implements OnInit, OnDestroy {
     article: Article;

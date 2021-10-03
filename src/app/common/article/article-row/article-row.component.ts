@@ -4,8 +4,7 @@ import {Router} from '@angular/router';
 
 @Component({
     selector: 'app-article-row',
-    templateUrl: './article-row.component.html',
-    styleUrls: ['./article-row.component.scss']
+    templateUrl: './article-row.component.html'
 })
 export class ArticleRowComponent implements OnInit {
     @Input() articleId: number;

@@ -6,8 +6,7 @@ import {FormControl, FormGroup} from '@angular/forms';
 
 @Component({
     selector: 'app-architect-login',
-    templateUrl: './architect-login.component.html',
-    styleUrls: ['./architect-login.component.scss']
+    templateUrl: './architect-login.component.html'
 })
 export class ArchitectLoginComponent implements OnInit {
     architectLoginForm: FormGroup;

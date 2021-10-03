@@ -5,8 +5,7 @@ import {Router} from '@angular/router';
 
 @Component({
     selector: 'app-article-list',
-    templateUrl: './article-list.component.html',
-    styleUrls: ['./article-list.component.scss']
+    templateUrl: './article-list.component.html'
 })
 export class ArticleListComponent implements OnInit, OnDestroy {
     articleList: Array<Article>;

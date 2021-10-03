@@ -6,8 +6,7 @@ import {ResponseModel} from '../../../common/models/response.model';
 
 @Component({
     selector: ' app-architect-category-select',
-    templateUrl: './architect-category-select.component.html',
-    styleUrls: ['./architect-category-select.component.scss']
+    templateUrl: './architect-category-select.component.html'
 })
 export class ArchitectCategorySelectComponent implements OnInit {
     @Input() article: Article;
