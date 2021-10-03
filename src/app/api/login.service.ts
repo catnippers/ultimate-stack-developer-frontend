@@ -8,12 +8,11 @@ import {CookieService} from 'ngx-cookie-service';
 export class LoginService {
     // for prod server use: private httpPrefix = 'https://';
     // for dev server use: private httpPrefix = 'http://';
-    private httpPrefix = 'https://';
+    private httpPrefix = 'http://';
 
     // for production server use: private backendUrl = 'ultimatestackdeveloper.herokuapp.com';
     // for local server use: private backendUrl = 'localhost:8082';
-    // for remote server use: private backendUrl = '192.168.0.199:8082';
-    private backendUrl = 'ultimatestackdeveloper.herokuapp.com';
+    private backendUrl = 'localhost:8082';
 
     constructor(private httpClient: HttpClient,
                 private cookieService: CookieService) {

@@ -26,7 +26,6 @@ Frontend part is based on:
 - `GraphQL` client for API queries is a homemade `POST` request generator with `Angular's` basic `HttpClient`
 
 - `Cypress` as the `End-to-end (E2E)` test framework
-    - Why not `Protractor`? Because it's going to be removed from `Angular` and I know how to work with `Cypress`
 
 ## Key Files Description
 `Dockerfile` - this file enables Docker Hub to properly dockerize* the app
@@ -88,20 +87,6 @@ Prerequisites
     - Launch `Terminal.app` and navigate (using `cd` command) to the project's directory
     - Use the `npm start` command to launch the `start` script from the `package.json` file (this is basically using the `Angular CLI`'s `ng serve` command which can be useful, if you'd like to add additional `Angular CLI`'s run parameters)
     - App should be available at `http://localhost:4200`
-
-### Deploy the project
-Running application on a docker container (TBA)
-
-Deployment of the app to a Netlify server (TBA)
-
-### Setup on Windows: (TBA)
-### Setup on Linux: (TBA)
-## Versions
-`Node.js` - `12.16.3` (version used in the Dockerfile: `12.7`)
-
-`Angular CLI` - `11.2.9`
-
-`Nginx` (used in the Dockerfile) - `1.17.1`
 
 
 

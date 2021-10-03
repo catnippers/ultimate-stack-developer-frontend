@@ -8,12 +8,11 @@ import {CookieService} from 'ngx-cookie-service';
 export class GraphQLService {
     // for prod server use: private httpPrefix = 'https://';
     // for dev server use: private httpPrefix = 'http://';
-    private httpPrefix = 'https://';
+    private httpPrefix = 'http://';
 
     // for production server use: private backendUrl = 'ultimatestackdeveloper.herokuapp.com';
     // for local server use: private backendUrl = 'localhost:8082';
-    // for remote server use: private backendUrl = '192.168.0.199:8082';
-    private backendUrl = 'ultimatestackdeveloper.herokuapp.com';
+    private backendUrl = 'localhost:8082';
 
     constructor(private httpClient: HttpClient,
                 private cookieService: CookieService) {
@@ -144,9 +143,10 @@ export class GraphQLService {
                 `${this.httpPrefix}${this.backendUrl}/graphql`,
                 // mutationArgs uses \\" because GraphQL won't work properly with a single quote marks
                 // response will be 200 status, but the values won't be persisted in the database
-                this.mutationCreatorWithoutResponseItems(
+                this.mutationCreator(
                     `assignCategoryToArticle`,
                     `articleId: \\"${articleId}\\", categoryId: \\"${categoryId}\\"`,
+                    'id title summary content',
                     null),
                 this.createRequestOptions())
             .toPromise();
@@ -158,9 +158,10 @@ export class GraphQLService {
                 `${this.httpPrefix}${this.backendUrl}/graphql`,
                 // mutationArgs uses \\" because GraphQL won't work properly with a single quote marks
                 // response will be 200 status, but the values won't be persisted in the database
-                this.mutationCreatorWithoutResponseItems(
+                this.mutationCreator(
                     `removeCategoryFromArticle`,
                     `articleId: \\"${articleId}\\", categoryId: \\"${categoryId}\\"`,
+                    'id title summary content',
                     null),
                 this.createRequestOptions())
             .toPromise();
@@ -213,12 +214,6 @@ export class GraphQLService {
                     mutationResponseItems: string,
                     variables: string) {
         return `{"query":"mutation { ${mutationName}(${mutationArgs}) { ${mutationResponseItems} }}","variables":${variables}}`;
-    }
-
-    mutationCreatorWithoutResponseItems(mutationName: string,
-                                        mutationArgs: string,
-                                        variables: string) {
-        return `{"query":"mutation { ${mutationName}(${mutationArgs}) }","variables":${variables}}`;
     }
 
     // default setting is token passed as header and CORS config (accept */*)

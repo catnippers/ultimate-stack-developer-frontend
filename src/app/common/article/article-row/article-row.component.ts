@@ -11,7 +11,7 @@ export class ArticleRowComponent implements OnInit {
     @Input() articleId: number;
     @Input() articleTitle: string;
     @Input() articleAuthor: string;
-    @Input() articlePublishedDate: string;
+    @Input() articleCreateDate: string;
     @Input() badges: Badge[];
 
     constructor(private router: Router) {
