@@ -20,9 +20,9 @@ export class CategoryService {
             this.graphQlService
                 .getAllCategoriesWithIdTitleTag()
                 .then((response: ResponseModel) => {
-                    response.data.findAllCategories.forEach(category => {
+                    response.data.findAllCategories.forEach((category) => {
                         if (this.categoryList
-                            .filter(categoryFromList => categoryFromList.id === category.id)
+                            .filter((categoryFromList) => categoryFromList.id === category.id)
                             .length === 0) {
                             this.categoryList.push(new Category().deserialize(category));
                             this.isCategoryListLoaded = true;

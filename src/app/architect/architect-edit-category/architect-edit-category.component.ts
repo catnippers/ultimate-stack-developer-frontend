@@ -26,7 +26,7 @@ export class ArchitectEditCategoryComponent implements OnInit {
     }
 
     private loadCategory() {
-        this.route.queryParams.subscribe(params => {
+        this.route.queryParams.subscribe((params) => {
             this.graphQLService
                 .getCategoryById(params.categoryId)
                 .toPromise()
@@ -48,7 +48,7 @@ export class ArchitectEditCategoryComponent implements OnInit {
         const newCategoryTitle = this.newCategoryForm.controls.newCategoryTitle.value;
         const newCategoryTag = this.newCategoryForm.controls.newCategoryTag.value;
 
-        this.route.queryParams.subscribe(params => {
+        this.route.queryParams.subscribe((params) => {
             this.graphQLService
                 .editCategoryTitle(
                     newCategoryTitle,

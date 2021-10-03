@@ -46,7 +46,7 @@ export class ArchitectLoginComponent implements OnInit {
                 this.cookieService.set('token', response.token);
                 this.navigateToArchitectDashboard();
             })
-            .catch(response => {
+            .catch((response) => {
                 this.invalidCredentialsMessage = response.error;
                 document.getElementById('invalid-credentials-message');
             });

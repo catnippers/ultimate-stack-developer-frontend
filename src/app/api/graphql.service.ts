@@ -46,7 +46,7 @@ export class GraphQLService {
     }
 
     getArticlesByCategoryId(categoryId: number) {
-        if (categoryId !== undefined) {
+        if (typeof categoryId !== 'undefined') {
             return this.httpClient
                 .post(
                     `${this.httpPrefix}${this.backendUrl}/graphql`,
@@ -62,7 +62,7 @@ export class GraphQLService {
     }
 
     getArticleById(articleId: any) {
-        if (articleId !== undefined) {
+        if (typeof articleId !== 'undefined') {
             return this.httpClient
                 .post(
                     `${this.httpPrefix}${this.backendUrl}/graphql`,

@@ -19,7 +19,7 @@ export class ArticleService {
     }
 
     public getArticleById() {
-        this.route.queryParams.subscribe(params => {
+        this.route.queryParams.subscribe((params) => {
             this.graphQlService
                 .getArticleById(params.articleId)
                 .toPromise()
@@ -31,7 +31,7 @@ export class ArticleService {
     }
 
     public getArticlesByCategoryId() {
-        this.route.queryParams.subscribe(params => {
+        this.route.queryParams.subscribe((params) => {
             this.graphQlService
                 .getArticlesByCategoryId(params.categoryId)
                 .then((response: ResponseModel) => {
@@ -63,7 +63,7 @@ export class ArticleService {
     }
 
     public getArticleByIdFromUrlParams() {
-        this.route.queryParams.subscribe(params => {
+        this.route.queryParams.subscribe((params) => {
             this.graphQlService
                 .getArticleById(params.articleId)
                 .subscribe((response: ResponseModel) => {
@@ -74,7 +74,7 @@ export class ArticleService {
     }
 
     editArticleById(newArticleTitle: string, newArticleSummary: string, newArticleContent: string) {
-        this.route.queryParams.subscribe(params => {
+        this.route.queryParams.subscribe((params) => {
             this.graphQlService
                 .editArticleById(
                     newArticleTitle,
@@ -90,8 +90,8 @@ export class ArticleService {
     getAllArticles() {
         this.graphQlService.getAllArticles()
             .then((response: ResponseModel) => {
-                response.data.findAllArticles.forEach(article => {
-                    if (this.articleList.filter(articleFromList => articleFromList.id === article.id).length === 0) {
+                response.data.findAllArticles.forEach((article) => {
+                    if (this.articleList.filter((articleFromList) => articleFromList.id === article.id).length === 0) {
                         this.articleList.push(new Article().deserialize(article));
                     }
                 });

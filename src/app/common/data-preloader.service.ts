@@ -39,7 +39,7 @@ export class DataPreloaderService {
     private subscribeToArticleListChange() {
         this.articleListSubscription = this.articleService.articleListChange
             .asObservable()
-            .subscribe(articleList => {
+            .subscribe((articleList) => {
                 this.articleList = articleList;
                 this.articleListChange.next(this.articleList);
             });
@@ -48,7 +48,7 @@ export class DataPreloaderService {
     private subscribeToCategoryListChange() {
         this.categoryListSubscription = this.categoryService.categoryListChange
             .asObservable()
-            .subscribe(categoryList => {
+            .subscribe((categoryList) => {
                 this.categoryList = categoryList;
                 this.categoryListChange.next(this.categoryList);
             });
@@ -58,8 +58,8 @@ export class DataPreloaderService {
         const articlesWithSelectedCategory = new Array<Article>();
 
         this.route.queryParams.subscribe(params => {
-            this.articleList.forEach(article => {
-                article.categories.forEach(category => {
+            this.articleList.forEach((article) => {
+                article.categories.forEach((category) => {
                     if (category.id === params.categoryId) {
                         articlesWithSelectedCategory.push(article);
                     }
@@ -72,8 +72,8 @@ export class DataPreloaderService {
 
     getArticleById() {
         let foundArticle;
-        this.route.queryParams.subscribe(params => {
-            this.articleList.forEach(article => {
+        this.route.queryParams.subscribe((params) => {
+            this.articleList.forEach((article) => {
                 if (article.id === params.articleId) {
                     foundArticle = article;
                 }

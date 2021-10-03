@@ -25,16 +25,15 @@ export class LoaderInterceptor implements HttpInterceptor {
     // console.log('Requests count: ' + this.requests.length);
 
     this.loaderService.isLoading.next(true);
-    return new Observable(observer => {
+    return new Observable((observer) => {
       const subscription = next.handle(httpRequest)
-          .subscribe(
-              event => {
+          .subscribe((event) => {
                 if (event instanceof HttpResponse) {
                   this.removeRequest(httpRequest);
                   observer.next(event);
                 }
               },
-              err => {
+              (err) => {
                 alert('error' + err);
                 this.removeRequest(httpRequest);
                 observer.error(err);

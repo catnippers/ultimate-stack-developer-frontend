@@ -21,10 +21,10 @@ export class Article implements Deserializable {
         input.authorLastName = input.authorLastName.toString().trim();
         input.authorFullName = input.authorFirstName + ' ' + input.authorLastName;
 
-        if (input.summary !== null && input.summary !== undefined) {
+        if (input.summary !== null && typeof input.summary !== 'undefined') {
             input.summary = input.summary.toString().trim();
         }
-        if (input.content !== null && input.content !== undefined) {
+        if (input.content !== null && typeof input.content !== 'undefined') {
             input.content = input.content.toString().trim();
         }
 
