@@ -9,7 +9,7 @@ import {CategoryService} from '../../common/category.service';
 @Component({
     selector: 'app-architect-edit-article',
     templateUrl: './architect-edit-article.component.html',
-    styleUrls: ['./architect-edit-article.component.scss']
+    styleUrls: ['../architect-new-article/architect-new-article.component.scss']
 })
 export class ArchitectEditArticleComponent implements OnInit, OnDestroy {
     @ViewChild('articleTitle') public articleTitleElemRef: ElementRef;

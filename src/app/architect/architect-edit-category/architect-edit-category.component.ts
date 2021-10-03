@@ -8,7 +8,7 @@ import {FormControl, FormGroup} from '@angular/forms';
 @Component({
     selector: 'app-architect-edit-category',
     templateUrl: './architect-edit-category.component.html',
-    styleUrls: ['./architect-edit-category.component.scss']
+    styleUrls: ['../architect-new-article/architect-new-article.component.scss']
 })
 export class ArchitectEditCategoryComponent implements OnInit {
     category: Category;

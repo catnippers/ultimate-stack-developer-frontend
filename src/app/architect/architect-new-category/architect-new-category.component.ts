@@ -7,7 +7,7 @@ import {FormControl, FormGroup} from '@angular/forms';
 @Component({
     selector: 'app-architect-new-category',
     templateUrl: './architect-new-category.component.html',
-    styleUrls: ['./architect-new-category.component.scss']
+    styleUrls: ['../architect-new-article/architect-new-article.component.scss']
 })
 export class ArchitectNewCategoryComponent implements OnInit {
     category: Category;
