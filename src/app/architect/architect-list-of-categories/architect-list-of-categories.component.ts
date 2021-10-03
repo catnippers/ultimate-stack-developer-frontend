@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {GraphQLService} from '../../api/graphql.service';
 import {ResponseModel} from '../../common/models/response.model';
@@ -19,7 +19,10 @@ export class ArchitectListOfCategoriesComponent implements OnInit {
     this.graphqlService
         .getAllCategoriesWithIdTitleTag()
         .then((response: ResponseModel) => {
-          response.data.findAllCategories.forEach(category => {
+          response
+              .data
+              .findAllCategories
+              .forEach((category) => {
             this.categories.push(new Category().deserialize(category));
           });
         });

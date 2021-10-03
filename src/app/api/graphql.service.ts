@@ -32,7 +32,7 @@ export class GraphQLService {
     }
 
     getCategoryById(categoryId: any) {
-        if (categoryId !== undefined) {
+        if (typeof categoryId !== 'undefined') {
             return this.httpClient
                 .post(
                     `${this.httpPrefix}${this.backendUrl}/graphql`,

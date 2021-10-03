@@ -30,7 +30,7 @@ export class ArchitectListOfArticlesComponent implements OnInit, OnDestroy {
     private subscribeToArticleListChange() {
         this.articleListSubscription = this.articleService.articleListChange
             .asObservable()
-            .subscribe(articleList => {
+            .subscribe((articleList) => {
                 this.articleList = articleList;
             });
     }

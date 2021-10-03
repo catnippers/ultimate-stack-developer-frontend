@@ -30,8 +30,8 @@ export class ArchitectCategorySelectComponent implements OnInit {
                 const assignedCategories = this.categoriesAssignedToArticle;
 
                 this.availableCategories = allCategories
-                    .filter(x => !assignedCategories
-                        .filter(y => y.title === x.title).length);
+                    .filter((x) => !assignedCategories
+                        .filter((y) => y.title === x.title).length);
             });
     }
 
@@ -42,9 +42,9 @@ export class ArchitectCategorySelectComponent implements OnInit {
     removeCategoryFromArticle(categoryTitle: string) {
         // Getting 0 index as there should be only one category available
         const selectedCategory: Category = this.categoriesAssignedToArticle
-            .filter(category => category.title === categoryTitle)[0];
+            .filter((category) => category.title === categoryTitle)[0];
         this.categoriesAssignedToArticle = this.categoriesAssignedToArticle
-            .filter(category => category !== selectedCategory);
+            .filter((category) => category !== selectedCategory);
         this.availableCategories.push(selectedCategory);
 
         this.graphQLService.removeCategoryFromArticle(this.article.id, selectedCategory.id);
@@ -53,9 +53,9 @@ export class ArchitectCategorySelectComponent implements OnInit {
     assignCategoryToArticle(categoryTitle: string) {
         // Getting 0 index as there should be only one category available
         const selectedCategory: Category = this.availableCategories
-            .filter(category => category.title === categoryTitle)[0];
+            .filter((category) => category.title === categoryTitle)[0];
         this.availableCategories = this.availableCategories
-            .filter(category => category !== selectedCategory);
+            .filter((category) => category !== selectedCategory);
         this.categoriesAssignedToArticle.push(selectedCategory);
         this.graphQLService.assignCategoryToArticle(this.article.id, selectedCategory.id);
     }
