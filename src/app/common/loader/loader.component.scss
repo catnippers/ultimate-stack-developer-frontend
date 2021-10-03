@@ -1,16 +1,16 @@
-.loading-spinner{
+.loading-spinner {
   background-color: #0000001f;
   position: absolute;
   width: 100%;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   height: 100vh;
   align-items: center;
   justify-content: center;
   display: flex;
 }
 
-.loading-spinner img{
+.loading-spinner img {
   align-self: center;
 }
 
