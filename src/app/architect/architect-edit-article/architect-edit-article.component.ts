@@ -68,7 +68,7 @@ export class ArchitectEditArticleComponent implements OnInit, OnDestroy {
     private subscribeToCategoryListChange() {
         this.categoryListSubscription = this.categoryService.categoryListChange
             .asObservable()
-            .subscribe(categoryList => {
+            .subscribe((categoryList) => {
                 this.categoryList = categoryList;
             });
     }

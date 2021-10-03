@@ -57,7 +57,7 @@ export class DataPreloaderService {
     getArticlesByCategoryId() {
         const articlesWithSelectedCategory = new Array<Article>();
 
-        this.route.queryParams.subscribe(params => {
+        this.route.queryParams.subscribe((params) => {
             this.articleList.forEach((article) => {
                 article.categories.forEach((category) => {
                     if (category.id === params.categoryId) {

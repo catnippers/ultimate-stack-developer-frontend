@@ -38,7 +38,7 @@ export class ArticleService {
                     response.data.findCategoryById.articles
                         .map((article: Article) => {
                             const articleListAfterFiltering = this.articleList
-                                .filter(articleFromList => articleFromList.id === article.id);
+                                .filter((articleFromList) => articleFromList.id === article.id);
 
                             if (articleListAfterFiltering.length === 0) {
                                 this.articleList.push(new Article().deserialize(article));

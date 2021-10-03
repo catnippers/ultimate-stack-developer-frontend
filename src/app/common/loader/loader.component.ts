@@ -13,7 +13,7 @@ export class LoaderComponent implements OnInit {
     currentTime;
 
     constructor(private loaderService: LoaderService) {
-        this.loaderService.isLoading.subscribe(isLoading => {
+        this.loaderService.isLoading.subscribe((isLoading) => {
             if (isLoading) {
                 this.resetLoaderIntroAnimation();
                 this.setLoaderTextAnimation();
